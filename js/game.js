@@ -45,7 +45,7 @@ var game = {
             ]
         },
         leftdoor: {
-            message: "A bird flew in with a key and notes. It flies to you and you took the key off.",          
+            message: "",
             choices: [
                 {
                     text: "Start over",
