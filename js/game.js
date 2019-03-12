@@ -6,33 +6,36 @@ var game = {
     levels: {
 
         start: {
-            message: "You come across a dark cave",
+            message: "You wake up to realize your in the middle of nowhere. You're in a field and you don't even know how you got there. There is a sign hanging from your neck saying: Find the Key and save your friend. You look to your left and right there are different houses. You chose to go",
             choices: [
                 {
-                    text: "Enter the cave",
-                    nextLevel: "cave",
+                    text: "The Right House",
+                    nextLevel: "righthouse",
                 },
 
                 {
-                    text: "Keep on moving",
-                    nextLevel: "field",
+                    text: "The Left House",
+                    nextLevel: "lefthouse",
                 },
             ]
         },
 
-        cave: {
-            background_image: "fire.gif",
-            music: "Final-Fantasy-7-Boss-Battle.mp3",
-            message: "You come across a fire monster or something!",
+        righthouse: {
+            background_image: "righthousehallway.png",
+            message: "You choose to go right and you see a nice fancy house.You wonder if you shoud take a peak and go inside.You see on both sides doors. The first two doors at the front of hallway sticks out to you. One is on the left the other is on the right",
             choices: [
                 {
-                    text: "Start over",
-                    nextLevel: "start",
+                    text: "Left Door",
+                    nextLevel: "leftdoor",
+                },
+                {
+                    text: "Right door",
+                    nextLevel: "rightdoor",
                 },
             ]
         },
 
-        field: {
+        lefthouse: {
             message: "Some adventurer you are...",
             choices: [
                 {
@@ -41,6 +44,12 @@ var game = {
                 },
             ]
         },
-
+        leftdoor: {
+            message: "A bird flew in with a key and notes. It flies to you and you took the key off.",          
+            choices: [
+                {
+                    text: "Start over",
+                    nextLevel: "start",
+        },
     }
 };
