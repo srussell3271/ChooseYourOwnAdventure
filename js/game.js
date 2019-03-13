@@ -1,7 +1,6 @@
 // NOTE - You must have a level with the name "start".  This is used as the first level in the game.
 
 var game = {
-    music: "98_Lost_Mine.mp3",
     background_image: "intro-bg.jpg",
     levels: {
 
@@ -9,13 +8,13 @@ var game = {
             message: "You wake up to realize your in the middle of nowhere. You're in a field and you don't even know how you got there. There is a sign hanging from your neck saying: Find the Key and save your friend. You look to your left and right there are different houses. You chose to go",
             choices: [
                 {
-                    text: "The Right House",
-                    nextLevel: "righthouse",
+                    text: "The Left House",
+                    nextLevel: "lefthouse",
                 },
 
                 {
-                    text: "The Left House",
-                    nextLevel: "lefthouse",
+                    text: "The Right House",
+                    nextLevel: "righthouse",
                 },
             ]
         },
@@ -45,11 +44,32 @@ var game = {
             ]
         },
         leftdoor: {
-            message: "",
-            choices: [
-                {
-                    text: "Start over",
-                    nextLevel: "start",
-        },
+                message: "You don't see anything inside so you go back out and go to the other door",
+                choices: [
+                    {
+                    text: "Enter the Other Room",
+                    nextLevel: "rightdoor",
+                    },
+                ]
+             },
+        rightdoor: {
+                message: "You see a raven sitting on the window and around it's neck is a key and a note",
+                choices: [
+                    {
+                    text: "Take the key and note",
+                    nextLevel: "keyFromBird",
+                    },
+                    
+                    {
+                    text: "Leave the Room",
+                    nextLevel: "hallway",
+                    },
+                ]
+        }
+ 
+    
+    
+    
+    
     }
 };
