@@ -53,10 +53,10 @@ var game = {
                 ]
              },
         rightdoor: {
-            message: "You see a raven sitting on the window and around it's neck is a key and a note",
+            message: "You see a raven sitting on the window and around it's neck is a note",
             choices: [
                 {
-                text: "Take the key and note",
+                text: "Take the note",
                 nextLevel: "afterBird",
                 },
                 
@@ -67,7 +67,7 @@ var game = {
             ]
         },
         afterBird: {
-            message: "The notes says: You found the key now find your friend...Time is ticking so I'll hurry up if I was you. So you either",
+            message: "The notes says: You found me now find your friend...Time is ticking so I'll hurry up if I was you. So you either",
             choices: [
                 {
                 text: "Look For You Friend",
@@ -76,7 +76,7 @@ var game = {
                 
                 {
                 text: "Save Yourself",
-                 nextLevel: "saveYourself",
+                 nextLevel: "hallway",
                 },
             ]
         },
@@ -145,7 +145,40 @@ var game = {
                 nextLevel: "youEscaping",
                 },
             ]
-        }    
-    
+        },  
+        
+        noHook: {
+            message: "You kept feeling the wall to see if its had another way in. Your friend voice got louder, but became silent after a few seconds.You realized they were killed so left the room",
+            choices: [
+                {
+                text: "Enter The Hallway",
+                nextLevel: "hallway",
+                }
+            ]
+        },
+        
+        theyEscaping: {
+            message: "They led you back downstairs and you see something move in the shadow. They noticed you started to panic so they pulled on your hand and ran out the house. You and your friend was able to escape. Congrats... ",
+            choices: [
+                {
+                text: "You Win, now leave ",
+                nextLevel: "start",
+                }
+            ]
+        },
+        
+        calmNoSee: {
+            message: "You took a few deep breaths, but on the third exhale you was stabbed right in your heart. You Died",
+            choices: [
+                {
+                text: "Game Over",
+                nextLevel: "start",
+                }
+            ]
+        }
+        
+        
+        
+        
     }
 };
