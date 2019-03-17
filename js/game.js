@@ -1,11 +1,11 @@
 // NOTE - You must have a level with the name "start".  This is used as the first level in the game.
 
 var game = {
-    background_image: "intro-bg.jpg",
+    background_image: "houses.jpg",
     levels: {
 
         start: {
-            message: "You wake up to realize your in the middle of nowhere. You're in a field and you don't even know how you got there. There is a sign hanging from your neck saying: Find the Key and save your friend. You look to your left and right there are different houses. You chose to go",
+            message: "You wake up to realize your in the middle of nowhere. You're in a field and you don't even know how you got there. There is a sign hanging from your neck saying: Find and save your friend. You look to your left and right there are different houses. You chose to go",
             choices: [
                 {
                     text: "The Left House",
@@ -44,6 +44,7 @@ var game = {
             ]
         },
         leftdoor: {
+            background_image: "leftroom.jpg",
             message: "You don't see anything inside so you go back out and go to the other door",            
             choices: [
                     {
@@ -53,6 +54,7 @@ var game = {
                 ]
              },
         rightdoor: {
+            background_image: "bird.jpg",
             message: "You see a raven sitting on the window and around it's neck is a note",
             choices: [
                 {
@@ -67,7 +69,8 @@ var game = {
             ]
         },
         afterBird: {
-            message: "The notes says: You found me now find your friend...Time is ticking so I'll hurry up if I was you. So you either",
+            background_image: "rightroom.jpg",
+            message: "The notes says: You found me now find your friend...Time is ticking so I'll hurry up if I was you. So you",
             choices: [
                 {
                 text: "Look For You Friend",
@@ -81,6 +84,7 @@ var game = {
             ]
         },
         hallway: {
+            background_image: "leavingHouse.jpg",
             message: "You walked back to the front door and you see something move in the shadows. Then it moves towards you, so you",
             choices: [
                 {
@@ -94,7 +98,8 @@ var game = {
                 },
             ]
         },
-        leaveRightHouse: {
+        leaveRightHouse: {            
+            background_image: "field.webp",
             message: "You ran as fast as you could and as far as you can. However, you wasn't no match for your killer. You didn't save your friend and you died.",
             choices: [
                 {
@@ -166,9 +171,17 @@ var game = {
                 }
             ]
         },
-        
         calmNoSee: {
             message: "You took a few deep breaths, but on the third exhale you was stabbed right in your heart. You Died",
+            choices: [
+                {
+                text: "Game Over",
+                nextLevel: "start",
+                }
+            ]
+        },
+        youEscaping: {
+            message: "You led you back downstairs and they see something move in the shadow. You ignored what they said and continued to walk out the house. Your friend stopped moving, causing you to look back. They was stabbed in the chest and next thing you know you was too. You died.",
             choices: [
                 {
                 text: "Game Over",
